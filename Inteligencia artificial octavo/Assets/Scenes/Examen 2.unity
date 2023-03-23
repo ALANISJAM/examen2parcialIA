@@ -217,6 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1220825034}
   - component: {fileID: 1220825035}
+  - component: {fileID: 1220825036}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Grid
@@ -255,6 +256,29 @@ MonoBehaviour:
   iWidth: 5
   iHeight: 5
   fTileSize: 10
+  ST_Node: {fileID: 0}
+  EN_Node: {fileID: 0}
+  Inicio: 0
+  Final: 0
+  Comienzo: 0
+  CaminoL: 0
+--- !u!114 &1220825036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220825032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8e0e922dfb37a44b904128c6446c54a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathfindingTest: {fileID: 0}
+  ch_inicio: 0
+  ch_final: 0
+  CordX: 0
+  CordY: 0
 --- !u!1 &2088644929
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,15 +348,21 @@ MonoBehaviour:
   fArriveRadius: 3
   bUseArrive: 1
   currentBehavior: 0
+  selected: 0
   StartPosition:
     x: 0
     y: 0
   EndPosition:
     x: 0
     y: 0
-  bSelected: 0
   Route: []
   fDistanceThreshold: 1
+  _PathfindingReference: {fileID: 0}
+  ch_inicio: 0
+  ch_final: 0
+  CordX: 0
+  CordY: 0
+  iCurrentRoutePoint: 0
 --- !u!212 &2088644933
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -393,7 +423,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2088644929}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.4, y: -1.3, z: 0}
+  m_LocalPosition: {x: 1.4, y: 17.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
